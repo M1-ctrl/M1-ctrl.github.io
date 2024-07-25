@@ -1,0 +1,387 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box ;
+}
+:root{
+    --blue: #6ae0ff;
+}
+
+body {
+   background: #000;
+   font-family: "ABeeZee",sans-serif;
+}
+h1 {
+    margin: 0;
+    left:0;
+    position:fixed;
+    left:0;
+    color: #fff;
+    max-width:fit-content;
+       background:linear-gradient(45deg,#207fbd,#a12fbd,#cc4311e4);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+header{
+    font-family: "Chakra Petch", sans-serif;
+    background:#000;
+    width:100%;
+    position: fixed;
+    padding:1.5rem;
+    display:flex;
+    border: inset;
+    justify-content:flex-end;
+    box-shadow:3px 5px 5px none;
+    z-index: 2;
+}
+#cta{
+    font-size:1.5rem;
+    padding:5px;
+    transform:translateX(0%);
+    transition:all .5s;
+}
+#menu{
+    color: #fff;
+}
+/* Navigation Menu Styles */
+nav {
+  background-color: #000;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  border: groove;
+  border-color: #fff;
+  display:none;
+  z-index: 3;
+  position: fixed;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin-right: 20px;
+ 
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 3px;
+  border-radius: 5px;
+   transition: all .7s;
+}
+nav a:hover{
+    background:rgba(0,0,255,.9);
+    color: #fff;
+}
+/*responsive nav bar*/
+@media(max-width:480px){
+    nav ul{
+        display: flex;
+        
+    }
+   nav li {
+  margin-top: 20px;
+}
+
+}
+@media(min-width:768px){
+    nav a{
+        font-size: 1.5rem;
+    }
+}
+/* Style the menu button */
+.menu-btn {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+/* Style the lines */
+.line {
+  background-color: #fff;
+  height: 2px;
+  width: 30px;
+  display: block;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style the lines when the button is clicked (X shape) */
+.menu-btn.clicked .line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.clicked .line-2 {
+  opacity: 0;
+}
+
+.menu-btn.clicked .line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Article Container Styles */
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Article Box Styles */
+
+.article-box{
+  flex: 1 1 30%; /* Make each article box take up 30% of the container */
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+   background-size:cover;
+    background-position: center;
+}
+
+.article-box:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styles */
+
+
+.article-box .images {
+  width: 100%;
+  height: 150px;
+  background-size:cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+}
+.images img{
+  width: 100%;
+  height: 150px;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  margin: 0 auto;
+}
+
+/* blurry loaded effect*/
+.images > img{
+    opacity:0;
+    blur:5px;
+    transition: opacity 500ms ease-in-out;
+}
+.images.blurClass > img{
+    opacity:1;
+}
+.images.blurClass::before {
+    content:none;
+}
+.images::before{
+    content:"";
+    position: relative;
+    inset:0;
+    filter: blur(6px);
+    animation:pulse 2.5s infinite;
+}
+@keyframes pulse {
+0%{
+    background-color: rgba(0,0,255,0.5);
+    filter: hue-rotate(180deg);
+    filter: blur(6px);
+}
+    50%{
+        background-color: rgba(0,0,255,1);
+        filter: hue-rotate(180deg);
+        filter: blur(6px);
+    }
+    100%{
+        background-color: rgba(0,255,255,0.5);
+        filter: hue-rotate(180deg);
+        filter: blur(6px);
+    }
+}
+
+/* Heading Styles */
+
+.article-box h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+/* Paragraph Styles */
+
+.article-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Read More Styles */
+
+.read-more {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.read-more:hover {
+  background-color: #444;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .article-box {
+    flex: 1 1 50%; /* Make each article box take up 50% of the container on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .article-box {
+    flex: 1 1 100%; /* Make each article box take up the full width of the container on very small screens */
+  }
+}
+/* footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  clear: both;
+}
+
+.social-links {
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #ccc;
+}
+
+.social-links i {
+  font-size: 24px;
+  vertical-align: middle;
+}
+#msgme {
+  max-width: 400px; /* limit the form width */
+  margin: 0 auto; /* center the form */
+  padding: 20px;
+  background-color: #000; /* dark gray background */
+  border: 1px solid #ccc; /* light gray border */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+/* Style the form elements */
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit {
+     color: #fff;
+     /* black background */
+  
+}
+#submit{
+    background: rgba(0,0,255,.9);
+  /* background:linear-gradient(45deg,#207fbd,#a12fbd,#cc4311e4); */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  
+}
+#submit:hover {
+  background-color: #3e8e41; /* darker green on hover */
+}
+.grade{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  #msgme {
+    max-width: 300px; /* reduce form width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #msgme {
+    max-width: 200px; /* reduce form width on very small screens */
+  }
+  label {
+    font-size: 14px; /* reduce label font size on very small screens */
+  }
+  input[type="email"], textarea {
+    font-size: 14px; /* reduce input font size on very small screens */
+  }
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px;
+  }
+  .social-links a {
+    margin: 0 5px;
+  }
+}
+
+
+
+/* Simple Loading Animation*/
+.loading{
+    display:none;
+    width:1.3rem;
+    height:1.3rem;
+    border:dotted;
+    margin: auto;
+    border-bottom:3px solid #000;
+    border-top: 3px solid #cc4311e4;
+    border-left: 3px solid #a12fbd;
+    border-right: 3px solid #000;
+    border-radius: 100%;
+    animation:load 1s linear infinite;
+}
+@keyframes load {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

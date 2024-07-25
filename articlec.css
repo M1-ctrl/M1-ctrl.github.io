@@ -1,0 +1,404 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box ;
+}
+/* Global styles */
+
+body {
+ font-family: "ABeeZee",sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Main content section */
+.main-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Article styles */
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.article-header {
+  margin-bottom: 20px;
+}
+
+.article-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.article-meta {
+  font-size: 16px;
+  color: #666;
+}
+.article-content .firste{
+  font-size: 48px;
+  font-weight: bold;
+  float: left;
+  line-height: 1;
+  padding-top: 0;
+  padding-right: 5px;
+}
+.article-image {
+  margin: 20px 0;
+}
+
+.article-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-caption {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+ .images{
+    position:relative;
+    width:100%;
+    height:auto;
+    border-radius:5px;
+    background-size:cover;
+    background-position: center;
+    /* background-image: url("https://img.wapka.io/00e96l.png"); */
+}
+.images img{
+    width:100%;
+    height: 100%;
+    border-radius:5px;
+    object-position: center;
+    object-fit: cover;
+}
+.article-content {
+  margin-top: 20px;
+}
+
+.article-content p {
+  margin-bottom: 20px;
+}
+
+.quote {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-left: 4px solid #ccc;
+  margin: 20px 0;
+}
+
+.quote p {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.quote cite {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+ .main-content {
+    padding: 10px;
+  }
+ .article-image img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+ .article-content p {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+ .main-content {
+    padding: 5px;
+  }
+ .article-image img {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+  }
+ .article-content p {
+    margin-bottom: 10px;
+  }
+}
+:root{
+    --blue: #6ae0ff;
+}
+
+h1 {
+    margin: 0;
+    left:0;
+    position:fixed;
+    left:0;
+    color: #fff;
+    max-width:fit-content;
+       background:linear-gradient(45deg,#207fbd,#a12fbd,#cc4311e4);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+header{
+    font-family: "Chakra Petch", sans-serif;
+    background:#000;
+    width:100%;
+    position: fixed;
+    padding:1.5rem;
+    display:flex;
+    border: inset;
+    justify-content:flex-end;
+    box-shadow:3px 5px 5px none;
+    z-index: 2;
+}
+#cta{
+    font-size:1.5rem;
+    padding:5px;
+    transform:translateX(0%);
+    transition:all .5s;
+}
+#menu{
+    color: #fff;
+}
+/* Navigation Menu Styles */
+nav {
+  background-color: #000;
+  opacity:.8;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  border: groove;
+  border-color: #fff;
+  display:none;
+  z-index: 3;
+  position: fixed;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin-right: 20px;
+ 
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 3px;
+  border-radius: 5px;
+   transition: all .7s;
+}
+nav a:hover{
+    background:rgba(0,0,255,.9);
+    color: #fff;
+}
+/*responsive nav bar*/
+@media(max-width:480px){
+    nav ul{
+        display: flex;
+        
+    }
+   nav li {
+  margin-top: 20px;
+}
+
+}
+@media(min-width:768px){
+    nav a{
+        font-size: 1.5rem;
+    }
+}
+/* Style the menu button */
+.menu-btn {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+/* Style the lines */
+.line {
+  background-color: #fff;
+  height: 2px;
+  width: 30px;
+  display: block;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style the lines when the button is clicked (X shape) */
+.menu-btn.clicked .line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.clicked .line-2 {
+  opacity: 0;
+}
+
+.menu-btn.clicked .line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  clear: both;
+}
+
+.social-links {
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #ccc;
+}
+
+.social-links i {
+  font-size: 24px;
+  vertical-align: middle;
+}
+#msgme {
+  max-width: 400px; /* limit the form width */
+  margin: 0 auto; /* center the form */
+  padding: 20px;
+  background-color: #000; /* dark gray background */
+  border: 1px solid #ccc; /* light gray border */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+/* lists */
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+li {
+  font-weight: bold;
+  margin: 1em;
+}
+
+/* Style the form elements */
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit {
+     color: #fff;
+     /* black background */
+  
+}
+#submit{
+    background: rgba(0,0,255,.9);
+  /* background:linear-gradient(45deg,#207fbd,#a12fbd,#cc4311e4); */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  
+}
+#submit:hover {
+  background-color: #3e8e41; /* darker green on hover */
+}
+.grade{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  #msgme {
+    max-width: 300px; /* reduce form width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #msgme {
+    max-width: 200px; /* reduce form width on very small screens */
+  }
+  label {
+    font-size: 14px; /* reduce label font size on very small screens */
+  }
+  input[type="email"], textarea {
+    font-size: 14px; /* reduce input font size on very small screens */
+  }
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px;
+  }
+  .social-links a {
+    margin: 0 5px;
+  }
+}
+
+
+
+/* Simple Loading Animation*/
+.loading{
+    display:none;
+    width:1.3rem;
+    height:1.3rem;
+    border:dotted;
+    margin: auto;
+    border-bottom:3px solid #000;
+    border-top: 3px solid #cc4311e4;
+    border-left: 3px solid #a12fbd;
+    border-right: 3px solid #000;
+    border-radius: 100%;
+    animation:load 1s linear infinite;
+}
+@keyframes load {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
