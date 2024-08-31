@@ -38,9 +38,20 @@ body {
     .main-content{
         font-size: 1.5rem;
     }
+    .article-title{
+        font-size: 2.5rem;
+    }
 }
 @media(min-width:1980px){
-    font-size: 3rem;
+      .main-content{
+        font-size: 2.5rem;
+    }
+    .article-header{
+        font-size: 3.5rem;
+        font-weight: bolder;
+        color: blue;
+    }
+  
 }
 /* Article styles */
 .article {
@@ -54,13 +65,13 @@ body {
 }
 
 .article-title {
-  font-size: 24px;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .article-meta {
-  font-size: 16px;
+  font-size: 1rem;
   color: #666;
 }
 .article-content .firste{
@@ -602,5 +613,10 @@ input[type="email"], textarea {
     }
     .code-block button {
         padding: 3px 6px;
+    }
+}
+@media(min-width:1280px){
+    .main-content{
+        font-size: 1.5rem;
     }
 }
