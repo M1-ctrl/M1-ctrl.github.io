@@ -1,10 +1,23 @@
-
+// script.js
 document.addEventListener("DOMContentLoaded",()=>{
-    // for call to action 
-    const target = document.querySelector("#target");
-    const cta = document.querySelector("#cta");
-    const header = document.getElementsByTagName("header")
-    const io = new IntersectionObserver((el)=>{
+    
+
+function createStars(numStars) {
+    const spaceBackground = document.querySelector('.space-background');
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.width = `${Math.random() * 2 + 1}px`;
+        star.style.height = `${Math.random() * 2 + 1}px`;
+        spaceBackground.appendChild(star);
+    }
+}
+
+createStars(100); // Create 100 stars
+
+ const io = new IntersectionObserver((el)=>{
         if(el[0].isIntersecting){
             
             cta.style.transform="translateX(150%)"
@@ -16,36 +29,16 @@ document.addEventListener("DOMContentLoaded",()=>{
         /* io.disconnect(); */
     })
     io.observe(target)
-    //for in page animations
-   
-    const inpage = new IntersectionObserver((page)=>{
-        page.forEach((elem)=>{
-            if(elem.isIntersecting){
-                elem.target.classList.add("bg");  
-            }
-            /* inpage.disconnect(); */
-        })
-    })
-    const anim = document.querySelectorAll(".parent");
-    anim.forEach((pg)=>{
-        inpage.observe(pg)
-        
-    })
-    //Lazy loaded Images
-    const blurry = document.querySelectorAll(".images");
-    blurry.forEach((bdiv)=>{
-        const bimgs = bdiv.querySelector("img");
-        function loaded(){
-            bdiv.classList.add("blurClass")
-        }
-        if (bimgs.complete) {
-            loaded()
-        }
-        else{
-            bimgs.addEventListener("load",loaded)
-        }
-    })
-       /* Email send function */
+      var typed = new Typed('#element', {
+  strings: ['Welcome To Dukespot', 'Discover Articles and Insights on Modern Technology', 'Click To Explore'],
+  typeSpeed: 50,
+  onComplete: function() {
+
+    console.log('All strings have been typed!');
+    $("#target").css("display","block")
+  }
+});
+  /* Email send function */
 let mail = document.getElementById("mail");
 let msg = document.getElementById("msg");
 let submit = document.getElementById("submit");
@@ -82,9 +75,5 @@ quicklink.listen({
     timeout:2000
 });
 
-  //code ends here  
+
 })
-
-
-
- 
