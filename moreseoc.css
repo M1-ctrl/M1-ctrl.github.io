@@ -181,7 +181,7 @@ nav a:hover{
 }
 
 /* blurry loaded effect*/
-.images > img{
+/*.images > img{
     opacity:0;
     blur:5px;
     transition: opacity 500ms ease-in-out;
@@ -216,6 +216,7 @@ nav a:hover{
         filter: blur(6px);
     }
 }
+*/
 
 /* Heading Styles */
 

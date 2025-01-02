@@ -38,6 +38,14 @@ h1{
   /* animation:colorChange 3s ease-in-out infinite;  */
   
 }
+.subheading{
+  padding: 15px;
+  background:linear-gradient(35deg,#15e0ff,#15e0ff,#ff1569,#ff1569);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
 
 #target{
