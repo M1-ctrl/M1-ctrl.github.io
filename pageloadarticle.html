@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- meta tags -->
+       <meta charset="UTF-8">
+     <meta name ="viewport" content="width=device-width, initial-scale = 1.0">
+     <meta name ="title" content ="How can I improve page loading? Here are some tips...">
+     <meta name ="keywords" content ="Page loading, site loading, website performance, fast loading">
+     <meta name ="description" content ="Make your web pages load faster using these simple methods.">
+      <meta property="og:title" content="How Can I Improve Page Loading? Here are some tips..">
+      <meta property="og:description" content="Make your web pages load faster using these simple methods ">
+      <meta property="og:image" content="">
+      <meta property="og:url" content="https://m1-ctrl.github.io/pageloadarticle.html">
+      <meta property="og:type" content="website">
+            <meta name="google-site-verification" content="6t17RU9BzP-9TO9rnFzvVH-deSFAipB3Z8vq5ROyL4U" />
+      <!-- google fonts-->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<!-- canonical links-->
+      <link rel = "canonical" href="https://m1-ctrl.github.io">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+     <link type="text/css" rel="stylesheet" href="articlec.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<!--your public key-->
+<script type="text/javascript">
+  (function () {
+    emailjs.init("rqySEZhRgtZkk_uVp");
+  })();
+</script>
+ <!-- Quicklinks installation -->
+ <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+     <script src="articlej.js" defer></script>
+    <title>How Can I Improve Page Loading? Here Are Some Tips...</title>
+</head>
+<body>
+    <header>
+        <h1>Dukespot.co</h1>
+        <div id="cta">
+           <!--  <h3 id="menu">Menu</h3> -->
+                 <!-- The menu button -->
+<div class="menu-btn" id="menu-btn">
+  <span class="line line-1"></span>
+  <span class="line line-2"></span>
+  <span class="line line-3"></span>
+</div>
+        </div>         
+        </header>
+    <br><br><br><br>
+    
+     <nav aria-label="Main Navigation">
+  <ul id="showmenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutduke.html">About</a></li>
+    <li><a href="updates.html">Updates</a></li>
+     <li><a href="niche.html">Pages</a></li>
+  </ul>
+</nav>
+
+        <!-- Main content section -->
+<main class="main-content">
+  <article class="article">
+    <div class="article-header">
+      <h2 class="article-title">How Can I Improve Page Loading? Here Are Some Tips...</h2>
+      <p class="article-meta">Published on <time datetime="2024-07-30">July 30, 2024</time> by <span class="author">Clint_theDuke</span></p>
+    </div>
+    <figure class="article-image">
+    <div class="images">  <img src="images/pgld.png" alt="Article image">
+    </div>
+      <figcaption class="image-caption"><i>faster page loading....</i></figcaption>
+    </figure>
+    <section class="article-content">
+      <p><span class="firste">A</span> good way to improve the overall user experience and performance of your website is to make your <b>web-pages load faster</b>. If you want to achieve this, you should be able to:</p>
+      </section>
+     
+      <section class="article-content">
+          <h2>1. Optimize your images</h2>
+          <p>Images are mostly large in size (sometimes &gt;300kb), and if not optimized, it could significantly slow down load time.</p>
+          <h3>How to Optimize?</h3>
+          <ul style="font-weight:100;">
+              <li><span style="color:#d31234;">
+                  Compress the images
+                  </span>:
+                  <br>
+              <span>There are a bunch of online tools that can be used to compress images to smaller sizes such as; ResizePixel, Compressor.io, optimizilla, etc...</span>
+              </li>
+              <li>
+                  <span style="color:#d31234; font-weight:bolder;">Lazy Loading</span>:<br> <span>It's best practice to load images only when they enter the view port, you could use the html loading='lazy' attribute to achieve this.</span>
+              <br>
+              <div class="code-block">
+        <pre>
+            <code class="code-snippet">
+          &lt;img src=<span style="color:#2bab34ee;">"img.png"</span> loading=<span style="color:#2bab34ee;">"lazy"</span>/&gt;
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+              </li>
+              <li>
+                 <span style="color:#d31234;">Responsive Images</span>:<br>
+            <span>Use responsive images to fit different screen sizes , you can use the media queries in CSS to achieve this.</span>
+            <br>
+            <div class="code-block">
+        <pre>
+            <code class="code-snippet">
+               <span style="color:#fff"> /* Create a flex container */</span>
+.image-container {
+  display: <span style="color:#2bab34ee;">flex</span>;
+  justify-content: <span style="color:#2bab34ee;">center</span>;
+}
+
+<span style="color:#fff">/* Make the image responsive */</span>
+.image-container img {
+  width: <span style="color:#2bab34ee;">100%</span>;
+  height: <span style="color:#2bab34ee;">auto</span>;
+  max-width: <span style="color:#2bab34ee;">800px</span>;
+}
+
+<span style="color:#fff">/* Make the image smaller on smaller screens */</span>
+@media (max-width: 600px) {
+  .image-container <span style="color:#fff">img</span> {
+    max-width: <span style="color:#2bab34ee;">300px</span>;
+  }
+}
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+    <p>The above CSS makes the image responsive, centers it within the container, and adjusts its size based on the screen width to achieve responsiveness.
+</p>
+    <p>Alternatively, you can use the HTML "sizes"
+    attribute:
+    </p>
+    <br>
+    <div class="code-block">
+        <pre>
+            <code class="code-snippet">
+               &lt;img src=<span style="color:#2bab34ee;">"image.jpg"</span>
+     srcset=<span style="color:#fff;">"image-small.jpg 400w,
+             image-medium.jpg 800w,
+             image-large.jpg 1200w"</span>
+     sizes=<span style="color:#fff;">"(max-width: 600px) 400px,
+            (max-width: 900px) 800px,
+            1200px"</span>
+     alt=<span style="color:#2bab34ee;">"Responsive image"</span>&gt;
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+    <!-- src="image.jpg": This is the fallback image source if the browser does not support srcset.
+srcset Attribute:
+
+This defines a set of image files and their sizes to be used depending on the screen's resolution or viewport size. -->
+
+    <p>The "srcset" attribute defines a set of image files and their sizes to be used depending on the viewport size, while the "sizes" attribute specifies the expected display size of the image for different viewport widths (in this case, 400px, 800px, 1200px).</p>
+    <p>
+              This setup allows the browser to choose the most appropriate image based on the viewport size and resolution, optimizing both image quality and loading time.
+          </p>
+              </li>
+             
+          </ul> 
+          
+      </section>
+      <section class="article-content">
+          <h2>2. Reduce Server Response Time</h2>
+          <p>
+              Server response time has a significant impact on the time it takes to load a page, here's how you can optimize it:
+          </p>
+       
+          <ul>
+            <li>
+            <span style="color:#d31234;">
+                Upgrade your hosting plans:
+            </span>:<br>
+            It is important to upgrade your hosting plans to meet your websites needs.
+              </li>
+               <li>
+            <span style="color:#d31234;">
+                Adjust Server Configurations
+            </span>:<br>
+           Server settings such as <b>max_connections, timeout</b> and <b>buffer sizes</b> based on your needs.
+              </li>
+               <li>
+            <span style="color:#d31234;">
+                Monitor the performance
+            </span>:<br>
+        Use tools like <b>Google PageSpeed Insights</b>, <b>GTmetrix</b>, etc.... to monitor performance and provide insights and recommendations for your page.
+              </li>
+          </ul>
+      </section>
+      <section class="article-content">
+          <h2>3. Minify your code files</h2>
+          <p>
+              Your code files could harbor unnecessary characters, white spaces and redundant code which could increase their file size. There are various ways to fix this issue such as:
+          </p>
+          <ul>
+        <li><span style="color:red;">Using Minification Tools</span>:
+        <br>
+        Tools such as UglifyJS (for JavaScript), CSSNano (for CSS), HTMLMinifier (for HTML) help to automatically minify your files.
+        </li>
+         <li><span style="color:red;">Using IDE Extensions</span>:
+        <br>
+       Some IDE's (Integrated Development Environment) such as Visual Studio Code; have plugins or extensions that can minify code directly within the editor.
+        </li>
+          </ul>
+      </section>
+      <section class="article-content">
+          <h2>
+             4. Use Asynchronous Loading for JavaScript files
+          </h2>
+          <p>
+          This is good practice as it helps to load the page as JavaScript files are being fetched. Asynchronous loading can be achieved by using the:
+          </p>
+
+          <ul>
+              <li>Async attribute
+              <br>
+            <div class="code-block">
+        <pre>
+            <code class="code-snippet">
+              &lt;script <span style="color:#fff">async</span> src=<span style="color:#2bab34ee;">"script.js"</span>&gt;&lt;/script&gt;
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+    </li>
+              
+              <li>Defer attribute
+              <br>
+            <div class="code-block">
+        <pre>
+            <code class="code-snippet">
+                  &lt;script <span style="color:#fff">defer</span> src=<span style="color:#2bab34ee;">"script.js"</span>&gt;&lt;/script&gt;
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+              </li>
+          </ul>
+          <p>
+              Use <b>defer</b> for scripts that modify the DOM to ensure that the script is executed after the HTML document has finished parsing.<br>
+Avoid using <b>async</b> for scripts that modify the DOM, as it can cause unexpected behavior.
+          </p>
+      </section>
+      <section class="article-content">
+          <h2>5. Enable Browser Caching</h2>
+<p>Caching allows browsers to store copies of files, reducing the need to download them again on subsequent visits. <br> You can implement by:</p>
+
+<ul>
+  <li><span style="color:red;">Set Cache-Control Headers</span>: <br>
+  Define how long browsers should cache specific files.</li>
+<li><span style="color:red;">Use a CDN</span>: <br>
+Content Delivery Networks (CDNs) can serve cached content from locations closer to the user.</li>
+</ul>
+    <p>Apache Servers are the most commonly used web servers, here's how to programmatically implement browser caching in them:</p>
+    <ol>
+        <li>Create a .htaccess file in the root folder of your website.</li>
+        <li>
+            Add the following code to set cache expiration times for various file types:
+            <br>
+            <div class="code-block">
+        <pre>
+            <code class="code-snippet">
+             &lt;IfModule mod_expires.c&gt;
+             <span style="color:#fff;"> 
+  ExpiresActive On
+  ExpiresDefault <span style="color:#2bab34ee;">"access plus 1 month"</span>
+  
+  # Cache images
+  ExpiresByType image/jpeg <span style="color:#2bab34ee;">"access plus 1 year"</span>
+  ExpiresByType image/png <span style="color:#2bab34ee;">"access plus 1 year"</span>
+  ExpiresByType image/gif <span style="color:#2bab34ee;">"access plus 1 year"</span>
+  
+  # Cache CSS and JavaScript
+  ExpiresByType text/css <span style="color:#2bab34ee;">"access plus 1 month"</span>
+  ExpiresByType application/javascript <span style="color:#2bab34ee;">"access plus 1 month"</span>
+  </span>
+&lt;/IfModule&gt;
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+    <p>This configuration helps improve site performance by specifying how long different types of files should be cached by the browser.</p>
+        </li>
+    </ol>
+        <p>In summary, employing these various strategies will definitely improve the overall speed and performance of your website.</p>
+      </section>
+    
+    
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/clinton-nwezeaku-505366322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/M1-ctrl" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://x.com/ClintTheDuke?t=tDJZ3r8FhmVhfby5AHCdRg&s=09" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+  <div id ="msgme">
+   <form action="">
+        <center><h4 style="color:#fff">Contact the writer</h4></center><br>
+       <label for ="mail">Email:</label><br>
+       <input type ="email" id ="mail"><br><br>
+        <label for ="msg">Message:</label>
+        <br>
+       <textarea id ="msg"></textarea>
+           
+       <br><br>
+       <center>
+       <div id ="submit">
+           <b class="submit">Send Message</b>
+           <div class="loading"></div>
+           </div>
+       </center>
+       <input id="reset" type ="reset" style="display:none">
+   </form>
+   </div>
+   <br><br>
+   <div><center>&copy; Copyright 2024 
+   <span class="grade">ClintTheDuke</span>
+   All Rights Reserved...</center>
+ 
+   </div>
+</footer>
+</body>

@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- meta tags -->
+       <meta charset="UTF-8">
+     <meta name ="viewport" content="width=device-width, initial-scale = 1.0">
+           <meta name="title" content="A Foundational Guide On Javascript Promises">
+     <meta name ="description" content ="A beginner friendly explanation of the basic concepts of JavaScript Promises and their use cases.">
+      <meta property="og:title" content="A Foundational Guide On Javascript Promises">
+      <meta property="og:description" content="A beginner friendly explanation of the basic concepts of JavaScript Promises and their use cases">
+      <meta property="og:image" content="images/aibabyintro.png">
+      <meta property="og:url" content="https://m1-ctrl.github.io/jspromises.html">
+      <meta property="og:type" content="website">
+      <meta name="google-site-verification" content="6t17RU9BzP-9TO9rnFzvVH-deSFAipB3Z8vq5ROyL4U" />
+      <!-- google fonts-->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<!-- canonical links-->
+      <link rel = "canonical" href="https://m1-ctrl.github.io">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+     <link type="text/css" rel="stylesheet" href="articlec.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<!--your public key-->
+<script type="text/javascript">
+  (function () {
+    emailjs.init("rqySEZhRgtZkk_uVp");
+  })();
+</script>
+ <!-- Quicklinks installation -->
+ <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+     <script src="articlej.js" defer></script>
+    <title>A Foundational Guide On JavaScript Promises</title>
+</head>
+<body>
+    <header>
+        <h1>Dukespot.co</h1>
+        <div id="cta">
+           <!--  <h3 id="menu">Menu</h3> -->
+                 <!-- The menu button -->
+<div class="menu-btn" id="menu-btn">
+  <span class="line line-1"></span>
+  <span class="line line-2"></span>
+  <span class="line line-3"></span>
+</div>
+        </div>         
+        </header>
+    <br><br><br><br>
+    
+     <nav aria-label="Main Navigation">
+  <ul id="showmenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutduke.html">About</a></li>
+    <li><a href="updates.html">Updates</a></li>
+     <li><a href="niche.html">Pages</a></li>
+  </ul>
+</nav>
+
+        <!-- Main content section -->
+<main class="main-content">
+  <article class="article">
+    <div class="article-header">
+      <h2 class="article-title">A Foundational Guide On Javascript Promises</h2>
+      <p class="article-meta">Published on <time datetime="2024-07-27">July 27, 2024</time> by <span class="author">Clint_theDuke</span><br>
+      <em>Other Contributors: CharmingDC</em>
+      </p>
+    </div>
+    <figure class="article-image">
+      <img src="images/jspromise.png" alt="Article image">
+      <figcaption class="image-caption">JavaScript Promises</figcaption>
+    </figure>
+    <section class="article-content">
+      <p> <span class="firste">A</span>  <strong>Promise</strong> is a declaration or assurance that one would do something or that a particular thing would happen. in this tutorial I am making a <strong>promise</strong> to give you the best <strong>JavaScript Promises</strong> explanation that you'll find anywhere on the web!
+        </p>
+        </section>
+        <!-- Section 2-->
+         <section class="article-content">
+       <h2>
+          What are Javascript Promises?
+        </h2>
+        
+        <p>
+          <p><strong>Promises</strong> in Javascript is a system of defining <span style="color:#315cc5; text-decoration:underline;" class="callback">Callback functions</span> it makes it alot easier because nesting a callback function can lead to alot of problems in your code which programmers often refer to as <strong>"Callback Hell!"</strong>. Promises are very useful when you want to execute something that could probably take a long time in the background such as:
+        </p>
+        
+        <ul>
+          <li>
+            Image loading 
+          </li>
+          <li>
+            Handling API requests
+          </li>
+          <li>
+           File and Database operations
+          </li>
+        </ul> 
+        <br>
+        <p>
+          Instead of making everything else wait for it you could just use a <strong>promise</strong> that would give feedback if it was successful or if there were any errors.
+            <br><br>
+             <div class="promise-illustration">
+        <div class="state pending">
+            <h2>Promise (Pending)</h2>
+        </div>
+        <div class="arrow down"></div>
+        <div class="state fulfilled">
+            <h2>Resolve (Fulfilled)</h2>
+        </div>
+        <div class="arrow down"></div>
+        <div class="state rejected">
+            <h2>Reject (Rejected)</h2>
+        </div>
+    </div>
+            Now that you understand what JavaScript Promises are all about....lets dive in deeper!
+        </p>
+      </section>
+      <!-- Section 3-->
+      <section class="article-content">
+           <h2>
+          The promise syntax.
+        </h2>
+        
+        <div class="codeEditor">
+         <ol class="codeLine">
+           <li>
+             // Example 1  
+           </li>
+           <li>
+             let p = new Promise(function(resolve,reject)) {/** somecode **/})
+           </li>
+           <li>
+             // Example 2  
+           </li>
+           <li>
+             let p = new Promise((resolve,reject))=>{/** somecode **/})  
+           </li>
+           <li>
+               
+           </li>
+         </ol>
+        </div>
+        
+        <p>
+         The code shows the normal declaration of a <strong>Promise</strong> and the JavaScript shorthand syntax.<br><br>
+         <center>
+         <h2>
+      <strong>
+       ***Breaking It Down*** 
+      </strong>
+      </center>
+      </h2>
+        </p>
+        
+        <ul>
+          <li>
+            p is a variable taking a <em>promise</em> as it's value
+          </li>
+          <li>
+            A <em>promise</em> takes one parameter
+          </li>
+          <li>
+            The parameter taken is a function
+          </li>
+          <li>
+            the function now takes two parameters one for success and the other for failure
+          </li>
+          <li>
+            the parameter for success is identified as <strong>resolve</strong>
+          </li>
+          <li>
+            the parameter for failure is identified as <strong>reject</strong>
+         </li>
+       </ul>
+        
+       <p>
+         Got that? You are Amazing! now let's progress into something more complex!....I'm sure you can handle it :)  
+       </p>        
+          
+      </section>
+      
+      <!-- section 4-->
+      <section class="article-content">
+          
+           <h2>
+          My first promise code.
+        </h2>
+        
+        <div class="codeEditor">
+         <ol class="codeLine">
+           <li>
+              
+           </li>
+           <li>
+             let keep = new Promise(function(resolve,reject)) {
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+              let a = 2 + 2;  
+             </span>
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+               if (a == 4) {
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 3rem;">
+               resolve("success");
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+               }
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+              else {
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 3rem;">
+              reject("failure");
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+               }
+             </span>  
+           </li>
+           <li>
+             })
+           </li>
+           <li>
+               
+           </li>
+         </ol>
+        </div>
+        
+        <p>
+          The above shows a good beginners example of what a promise looks like.<br><br>
+          <strong>***Breaking It Down***</strong><br><br>
+        </p>
+        
+        <p>
+          A promise is declared as the value of the variable called "keep" (remember that promises take a function as the parameter); now "some code" has been finally passed to that function that if a equals 4 the promise is resolved else the promise is rejected. <br><br>
+        <center>***We're almost there!, If you managed to come this far your a champion!!***</center>
+        </p>
+      </section>
+
+      
+      <!-- section five (explanation)-->
+      <section class="article-content">
+        <h2>
+          Promises in action.
+        </h2>
+       
+        <h3>
+          <span style="margin-right: 0.6rem;">The</span> ".then" <span style="margin: 0rem 0.6rem;">and</span> ".catch"
+        </h3><br>
+        
+        <p>
+         This looks like the most complex part of the promise saga but it's actually a very easy concept to understand. the <strong>then</strong> and <strong>catch</strong> are methods for the parameters <strong>resolve i.e(success) and reject i.e(failure)</strong>.<br>
+               <strong>".then"</strong> would only run if the promise was kept and <strong>".catch"</strong> would only run if the promise was not kept. 
+        </p><br>
+        
+        <h3>
+          How does "then"  and "catch"  work?
+        </h3><br>
+        
+        <p>
+            <strong>then</strong> and <strong>catch</strong> are methods that takes functions as parameters;<br>in the image below, <strong>then</strong> takes a function as it's parameter, that function now takes one parameter called msg.<br>
+               msg is now the function parameter of <strong>then</strong> since <strong>then</strong> is a method for <strong>resolve</strong>, msg will now output whatever code we have put in the <strong>resolve()</strong> of the promise. in our example, the code we put is a string called "success".<br>
+        </p><br>
+        
+        <div class="codeEditor">
+         <ol class="codeLine">
+           <li>
+              
+           </li>
+           <li>
+             let keep = new Promise(function(resolve,reject)) {
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+              let a = 2 + 2;  
+             </span>
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+               if (a == 4) {
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 3rem;">
+               resolve("success");
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+               }
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+              else {
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 3rem;">
+              reject("failure");
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+               }
+             </span>  
+           </li>
+           <li>
+             })
+           </li>
+           <li>
+               
+           </li>
+           <li>
+             keep.then=(function(msg) {
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+              console.log("The promise was a "+ msg)
+             </span>  
+           </li>
+           <li>
+             }).catch.function(msg) {
+           </li>
+           <li>
+            <span style="margin-left: 1.5rem;">
+              console.log("The promise was a "+ msg)
+             </span>  
+           </li>
+           <li>
+             }) // outputs success because 2 + 2 is 4
+           </li>
+           <li>
+            
+           </li>
+         </ol>
+        </div>
+        
+        <p>
+          Here the promise was kept and the code outputs <strong>"the promise was a success"</strong>.
+               <br><br>
+                 <strong>catch</strong> basically does the same thing, just that since the <strong>.catch</strong> is used for <strong>reject</strong>
+ the function parameter would return whatever code we put in <strong>reject()</strong>. in our example the code we put is a string called "failure".
+        </p><br>
+         
+        <div class="codeEditor">
+         <ol class="codeLine">
+           <li>
+              
+           </li>
+           <li>
+             let keep = new Promise(function(resolve,reject)) {
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+              let a = 2 + 3;  
+             </span>
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+               if (a == 4) {
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 3rem;">
+               resolve("success");
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+               }
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+              else {
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 3rem;">
+              reject("failure");
+             </span>  
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+               }
+             </span>  
+           </li>
+           <li>
+             })
+           </li>
+           <li>
+               
+           </li>
+           <li>
+             keep.then=(function(msg) {
+           </li>
+           <li>
+             <span style="margin-left: 1.5rem;">
+              console.log("The promise was a "+ msg)
+             </span>  
+           </li>
+           <li>
+             }).catch.function(msg) {
+           </li>
+           <li>
+            <span style="margin-left: 1.5rem;">
+              console.log("The promise was a "+ msg)
+             </span>  
+           </li>
+           <li>
+             }) // outputs failure because 2 + 3 is not 4
+           </li>
+           <li>
+            
+           </li>
+         </ol>
+        </div>       
+        
+        <p>
+          Here the promise was Not kept and the code outputs <strong>"the promise was a failure"</strong>
+        </p>
+      </section>
+      <!-- final section -->
+      <section class="article-content">
+        <h2>
+          Summary
+        </h2>
+        <p>JavaScript Promises are important in web development, they help to simplify the handling of asynchronous operations.<br>
+        They can be used to execute code specifying what should happen if the promise is fulfilled <b>.then()</b> or incase of errors <b>.catch()</b>, <b>.finally()</b> is used to execute code regardless of the outcome.
+This entire approach helps make asynchronous code more readable and maintainable.
+        </p>
+     </section>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/clinton-nwezeaku-505366322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/M1-ctrl" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://x.com/ClintTheDuke?t=tDJZ3r8FhmVhfby5AHCdRg&s=09" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+  <div id ="msgme">
+   <form action="">
+        <center><h4 style="color:#fff">Contact the writer</h4></center><br>
+       <label for ="mail">Email:</label><br>
+       <input type ="email" id ="mail"><br><br>
+        <label for ="msg">Message:</label>
+        <br>
+       <textarea id ="msg"></textarea>
+           
+       <br><br>
+       <center>
+       <div id ="submit">
+           <b class="submit">Send Message</b>
+           <div class="loading"></div>
+           </div>
+       </center>
+       <input id="reset" type ="reset" style="display:none">
+   </form>
+   </div>
+   <br><br>
+   <div><center>&copy; Copyright 2024 
+   <span class="grade">ClintTheDuke</span>
+   All Rights Reserved...</center>
+   </div>
+</footer>
+</body>

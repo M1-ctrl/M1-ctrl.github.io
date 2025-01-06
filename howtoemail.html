@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- meta tags -->
+       <meta charset="UTF-8">
+     <meta name ="viewport" content="width=device-width, initial-scale = 1.0">
+     <meta name ="title" content="How To Receive Emails Using Only Frontend">
+     <meta name ="description" content ="Go to the EmailJS website and sign up for a free account. After filling out the registration form you'll receive a confirmation email to verify your account...">
+     <meta name ="keywords" content ="receive emails, frontend technologies, how can i receive emails">
+      <meta property="og:title" content="How To Receive Emails From Your Site Using Only Frontend">
+      <meta property="og:description" content="A step-by-step guide on how to receive emails from your site using only frontend">
+      <meta property="og:image" content="">
+      <meta property="og:url" content="https://m1-ctrl.github.io/howtoemail.html">
+      <meta property="og:type" content="website">
+      <!-- google fonts-->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<!-- canonical links-->
+      <link rel = "canonical" href="https://m1-ctrl.github.io">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+     <link type="text/css" rel="stylesheet" href="articlec.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<!--your public key-->
+<script type="text/javascript">
+  (function () {
+    emailjs.init("rqySEZhRgtZkk_uVp");
+  })();
+</script>
+ <!-- Quicklinks installation -->
+ <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+     <script src="articlej.js" defer></script>
+    <title>How To Receive Emails From Your Site Using Only Frontend</title>
+</head>
+<body>
+    <header>
+        <h1>Dukespot.co</h1>
+        <div id="cta">
+           <!--  <h3 id="menu">Menu</h3> -->
+                 <!-- The menu button -->
+<div class="menu-btn" id="menu-btn">
+  <span class="line line-1"></span>
+  <span class="line line-2"></span>
+  <span class="line line-3"></span>
+</div>
+        </div>         
+        </header>
+    <br><br><br><br>
+    
+     <nav aria-label="Main Navigation">
+  <ul id="showmenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutduke.html">About</a></li>
+    <li><a href="updates.html">Updates</a></li>
+     <li><a href="niche.html">Pages</a></li>
+  </ul>
+</nav>
+
+        <!-- Main content section -->
+<main class="main-content">
+  <article class="article">
+    <div class="article-header">
+      <h2 class="article-title">How To Receive Emails From Your Site Using Only Frontend</h2>
+      <p class="article-meta">Published on <time datetime="2024-08-04">August 4, 2024</time> by <span class="author">Clint_theDuke</span></p>
+    </div>
+   
+    <section class="article-content">
+      <p><span class="firste">S</span>ending and receiving emails using only front-end technologies (HTML, CSS, and JavaScript) is not entirely possible. However, there are approaches that can achieve similar results. For instance, you can use email forwarding services like <b>Mailgun, SendGrid, or EmailJS</b>, which provide APIs to handle email forwarding in your frontend application.</p>
+      <p>This article provides a step-by-step guide on how to use <b>EmailJS</b> to handle emails in your frontend application.</p>
+      </section>
+   
+      <section class="article-content">
+     <h2>1. Setting Up Your EmailJS</h2>
+           <br>
+           <ul>
+             <li><span style="font-size:1.2rem; color:var(--lb);">Sign up for EmailJS:</span>
+                 <p>Go to the <a href="https://www.emailjs.com" rel ="nofollow">EmailJS website</a> and sign up for a free account. After filling out the registration form, You'll receive a confirmation email to verify your account.</p></li>
+                 <li>
+                      <span style="font-size:1.2rem; color:var(--lb);">Create a New Service</span>
+               <p>A service represents an Email service provider used for sending emails such as; Gmail or Outlook. Login to your EmailJS account and click on <b style="color:var(--lb)">"Create a New Service"</b>. Choose your email service provider from the list and follow the prompts to set up the service.</p>
+                <div class="images">  <img src="images/emjservices.png" alt="Article image" width="100%">
+    </div>
+                 </li>
+               
+                 
+                 <li>
+                       <span style="font-size:1.2rem; color:var(--lb);">Create a New Template:</span>
+                 <p>
+                     In EmailJS, the template defines the structure and content of the emails. Click on the <b style="color: var(--lb);">"Create a New Template"</b> button to create a new email template.
+                     </p>
+                        <div class="images">  <img src="images/emjtemp.png" alt="image" width="100%">
+    </div>
+    <p><em>The <span style="color:var(--lb)">"{}"</span>
+    is a means for defining dynamic data, the values defined in the curly braces act as reference in the parameters defined in your code....</em></p>
+    <div class="images">  <img src="images/emjparams.png" alt="illustrating template parameters" width="100%">
+    </div>
+                 </li>
+             
+           </ul>
+           <section class="article-content">
+              
+           </section>
+      </section>
+      <section class="article-content">
+      <h2>1. Installing the EmailJS SDK in your code</h2>
+      <br>
+      <p>
+          This can be done using npm or yarn
+      </p>
+      <ul>
+      <li>Add an EmailJS plugin or cdn link in the head section of your page to get started:
+       <div class="code-block">
+        <pre>
+            <code class="code-snippet">
+          &lt;head&gt;
+  &lt;title&gt;<span style="color:#fff;">Email Receiver(EmailJS)</span>&lt;/title&gt;
+  &lt;script <span style="color:#fff;">src =</span><span style="color:var(--jg)">"https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"</span>&gt;&lt;/script&gt;
+&lt;/head&gt;
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+    </li>
+    <li>
+        Add your public key:(In the head section)<br>
+        <div class="code-block">
+        <pre>
+            <code class="code-snippet">
+         &lt;script <span style="color:#fff;">type=</span><span style="color:var(--jg)">"text/javascript"</span>&gt;
+ <span style="color:#fff;"> (function () {
+   <span style="color:#fff;">emailjs.init( <span style="color:var(--jg);">"Your_Public_Key"</span>);</span>
+  })();</span>
+&lt;/script&gt;
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+    </li>
+    </ul>
+    </section>  
+    <section class="article-content">
+    <h2>2. Defining The Code</h2>
+        <br>
+        <p>This is the part where you write some code to handle exactly what you want to see when receiving the emails.</p>
+        <ul>
+            <li>
+                The HTML:
+                <div class="code-block">
+        <pre>
+            
+            <code class="code-snippet">
+        &lt;body&gt;
+        &lt;div <span style="color:#fff;">id =</span><span style="color:var(--jg);">"msgme"</span>&gt;
+   &lt;form action=""&gt;
+
+       &lt;label <span style="color:#fff;">for =</span><span style="color:var(--jg);">"mail"</span>&gt;<span style="color:#fff;">Email:</span>&lt;/label&gt;
+       &lt;br&gt;
+       &lt;input <span style="color:#fff;">type =</span><span style="color:var(--jg);">"email"</span> <span style="color:#fff;">id =</span><span style="color:var(--jg);">"mail"</span>&gt;
+       &lt;br&gt;&lt;br&gt;
+        &lt;label <span style="color:#fff;">for =</span><span style="color:var(--jg);">"msg"</span>&gt;<span style="color:#fff;">Message:</span>&lt;/label&gt;
+        &lt;br&gt;
+       &lt;textarea <span style="color:#fff;">id =</span><span style="color:var(--jg);">"msg"</span>&gt;&lt;/textarea&gt;
+           
+       &lt;br&gt;&lt;br&gt;
+       &lt;center&gt;&lt;span <span style="color:#fff;">id =</span><span style="color:var(--jg);">"submit"</span>&gt;<span style="color:#fff;">Send Message</span>&lt;/span&gt;&lt;/center&gt;
+   &lt;/form&gt;
+   &lt;/div&gt;
+   &lt;/body&gt;
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+    <p><em>This HTML code creates a form designed to handle user interaction. The purpose of this form is to collect the user's email address and a message to send.</em></p>
+            </li>
+            <li>The CSS
+            <div class="code-block">
+        <pre>
+            
+            <code class="code-snippet">
+         <span style="color:#fff;">  <span style="color:var(--jf)">#msgme</span>{
+    <span style="color:var(--jb);">width</span>:20rem;
+    <span style="color:var(--jb);">height</span>:15rem;
+    <span style="color:var(--jb);">margin</span>:auto;
+    <span style="color:var(--jb);">display</span>:grid;
+    <span style="color:var(--jb);">place-content</span>:center;
+    <span style="color:var(--jb);">align-content</span>:center;
+    <span style="color:var(--jb);">justify-content</span>:center;
+    <span style="color:var(--jb);">align-items</span>:center;
+    <span style="color:var(--jb);">border</span>:groove;
+}
+<span style="color:var(--jf);">#msgme input</span>{
+    <span style="color:var(--jb);">margin-top</span>:.5rem;
+    <span style="color:var(--jb);">border</span>:transparent ;
+    <span style="color:var(--jb);">border-bottom</span>:3px solid blue;
+    <span style="color:var(--jb);">outline</span>:none;
+}
+
+<span style="color:var(--jf);">#msg</span>{
+    <span style="color:var(--jb);">resize</span>:none;
+    <span style="color:var(--jb);">border</span>:transparent ;
+    <span style="color:var(--jb);">border-bottom</span>:3px solid blue;
+    <span style="color:var(--jb);">outline</span>:none;
+    <span style="color:var(--jb);">width</span>:12rem;
+}
+<span style="color:var(--jf);">#mail</span>{
+    <span style="color:var(--jb);">width</span>:12rem;
+}
+<span style="color:var(--jf);">#submit</span>{
+    <span style="color:var(--jb);">text-align</span>:center;
+    <span style="color:var(--jb);">padding</span>:5px;
+    <span style="color:var(--jb);">background</span>:#000;
+    <span style="color:var(--jb);">color</span>:#fff;
+    
+}</span>
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+    <p><em>This CSS code simply adds style to the HTML form.</em></p>
+            </li>
+            <li>The JavaScript:
+            <div class="code-block">
+        <pre>
+            
+            <code class="code-snippet">
+        <span style="color:#fff;">  <span style="color:var(--cs);">document</span>.<span style="color:var(--jb);">addEventListener</span>(<span style="color:var(--jg);">"DOMContentLoaded"</span>,()=>{
+<span style="color:var(--jb);">let</span> mail = <span style="color:var(--cs);">document</span>.getElementById(<span style="color:var(--jg);">"mail"</span>)
+<span style="color:var(--jb);">let</span> msg = <span style="color:var(--cs);">document</span>.getElementById(<span style="color:var(--jg);">"msg"</span>)
+<span style="color:var(--jb);">let</span> submit = <span style="color:var(--cs);">document</span>.getElementById(<span style="color:var(--jg);">"submit"</span>)
+submit.<span style="color:var(--jb);">onclick</span> = ()=>{
+    <span style="color:var(--jb);">if</span>(mail.value!=<span style="color:var(--jg);">""</span>&&msg.value!=<span style="color:var(--jg);">""</span>){
+    <span style="color:var(--jb);">var</span> templateParams = {
+  <span style="color:var(--jb);">myname</span>:<span style="color:var(--jg)">"Your_Name"</span>,
+  <span style="color:var(--jb);">name</span>: mail.value,
+  <span style="color:var(--jb);">message</span>: msg.value
+};
+<span style="color:var(--jc)">//emailjs.send(' your service_key','your template id', parameters)</span>
+emailjs.send(<span style="var(--jg)">'your_service_key'</span>, <span style="color:var(--jg)">'your_template_id'</span>, templateParams)
+
+  .<span style="color:var(--jb)">then</span>(<span style="color:var(--jf)">function</span> (response) {
+    <span style="color:var(--jb);">console</span>.<span style="color:var(--jg);">log</span>('SUCCESS!', response.status, response.text);
+  }, function (error) {
+    <span style="color:var(--jb);">console</span>.<span style="color:var(--jg);">log</span>('FAILED...', error);
+  })
+  }
+  else{
+      alert("Please fill essential details")
+      <span style="color:var(--jc);">//swal("Please fill essential details","","warning")
+      //(for sweetalert library...)
+      </span>
+  }
+}
+
+    
+})
+</span>
+            </code>
+        </pre>
+        <button class="copy-btn">Copy Code</button>
+    </div>
+    <p><em>
+        This JavaScript code simply checks if the email and message fields from the HTML form are filled. If they are, it sends an email using the EmailJS service.
+     Ensure to add your <b style="color:var(--lb)">"service key"</b> and your <b style="color:var(--lb)">"template id"</b> which can be gotten from the EmailJS Dashboard.
+    </em></p>
+    <p>
+        <em>
+            <span style="color:green">(Notice how the property names of your object eg <span style="color:var(--lb)">"myname"</span>, tally with the values provided in the curly braces <span style="color:var(--lb)">"{}"</span> of your template).</span>
+        </em>
+    </p>
+    
+    </li>
+        </ul>
+      
+    </section>
+     <section class="article-content">
+        <p>
+            <b>In summary</b>, EmailJS simplifies the process of sending emails directly from your website without requiring backend setup. You could sign up for a free account with them, and follow these guides to get started.</p>
+            <p>This helps frontend developers be more contactable as potential clients could view your work and message you directly from your frontend site!</p>
+    </section>
+    
+  </article>
+</main>   
+            
+
+<footer class="footer">
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/clinton-nwezeaku-505366322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/M1-ctrl" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://x.com/ClintTheDuke?t=tDJZ3r8FhmVhfby5AHCdRg&s=09" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+  <div id ="msgme">
+   <form action="">
+        <center><h4 style="color:#fff">Contact the writer</h4></center><br>
+       <label for ="mail">Email:</label><br>
+       <input type ="email" id ="mail"><br><br>
+        <label for ="msg">Message:</label>
+        <br>
+       <textarea id ="msg"></textarea>
+           
+       <br><br>
+       <center>
+       <div id ="submit">
+           <b class="submit">Send Message</b>
+           <div class="loading"></div>
+           </div>
+       </center>
+       <input id="reset" type ="reset" style="display:none">
+   </form>
+   </div>
+   <br><br>
+   <div><center>&copy; Copyright 2024 
+   <span class="grade">ClintTheDuke</span>
+   All Rights Reserved...</center>
+   <br>
+   <center>
+       <span>Images By <a href="https://www.freepik.com/" rel="nofollow" style="color:#fff;">freepik.com</a>
+   </span></center>
+   </div>
+</footer>
+</body>

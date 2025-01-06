@@ -1,0 +1,319 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box ;
+}
+body {
+   background: #000;
+   font-family: "ABeeZee",sans-serif;
+   
+}
+h1 {
+    margin: 0;
+    left:0;
+    position:fixed;
+    left:0;
+    color: #fff;
+    max-width:fit-content;
+    font-family: "Chakra Petch", sans-serif; 
+    background:linear-gradient(35deg,#15e0ff,#15e0ff,#ff1569,#ff1569);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+header{
+    font-family: "Chakra Petch", sans-serif;
+    background:#000;
+    width:100%;
+    position: fixed;
+    padding:1.5rem;
+    display:flex;
+    border: inset;
+    justify-content:flex-end;
+    box-shadow:3px 5px 5px none;
+    z-index: 2;
+}
+#cta{
+    font-size:1.5rem;
+    padding:5px;
+    transform:translateX(0%);
+    transition:all .5s;
+}
+#menu{
+    color: #fff;
+}
+
+.parent-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color:#000;
+  border-bottom: 1px solid #ddd;
+}
+
+.child-box {
+  width: calc(25% - 10px); 
+  height: 50px; 
+  margin: 10px; 
+  background:linear-gradient(35deg,#15e0ff,#15e0ff,#ff1569,#ff1569);
+  font-family: "Chakra Petch", sans-serif;
+  text-decoration: none;
+  color:#fff;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+  opacity:0;
+  transform: translateX(-150%);
+  transition: all .8s;
+  z-index: 1;
+  
+}
+.anim{
+    transform: translateX(0);
+    opacity: 1;
+}
+.child-box:nth-child(1){
+    transition-delay: .1s;
+    
+}
+.child-box:nth-child(2){
+    transition-delay: .4s;
+}
+.child-box:nth-child(3){
+    transition-delay: .7s;
+}
+.child-box:nth-child(4){
+    transition-delay: 1.0s;
+}
+.child-box:nth-child(5){
+    transition-delay: 1.3s;
+} 
+
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  clear: both;
+}
+
+.social-links {
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #ccc;
+}
+
+.social-links i {
+  font-size: 24px;
+  vertical-align: middle;
+}
+#msgme {
+  max-width: 400px; /* limit the form width */
+  margin: 0 auto; /* center the form */
+  padding: 20px;
+  background-color: #000; /* dark gray background */
+  border: 1px solid #ccc; /* light gray border */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+/* Style the form elements */
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit {
+     color: #fff;
+     /* black background */
+  
+}
+#submit{
+    background: #15e0ff;
+    border: inset;
+    border-color: #fff;
+  /* background:linear-gradient(45deg,#207fbd,#a12fbd,#cc4311e4); */
+  padding: 10px 20px;
+  border-radius: 5px;
+  
+}
+#submit:hover {
+  background-color: #3e8e41; /* darker green on hover */
+}
+.grade{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  #msgme {
+    max-width: 300px; /* reduce form width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #msgme {
+    max-width: 200px; /* reduce form width on very small screens */
+  }
+  label {
+    font-size: 14px; /* reduce label font size on very small screens */
+  }
+  input[type="email"], textarea {
+    font-size: 14px; /* reduce input font size on very small screens */
+  }
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px;
+  }
+  .social-links a {
+    margin: 0 5px;
+  }
+}
+@media (max-width: 600px) {
+  .child-box {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 400px) {
+  .child-box {
+    width: calc(50% - 10px);
+  }
+}
+/* Style the menu button */
+.menu-btn {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+/* Style the lines */
+.line {
+  background-color: #fff;
+  height: 2px;
+  width: 30px;
+  display: block;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style the lines when the button is clicked (X shape) */
+.menu-btn.clicked .line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.clicked .line-2 {
+  opacity: 0;
+}
+
+.menu-btn.clicked .line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation Menu Styles */
+nav {
+  background-color: #000;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  border: groove;
+  border-color: #fff;
+  display:none;
+  z-index: 3;
+  position: fixed;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin-right: 20px;
+ 
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 3px;
+  border-radius: 5px;
+   transition: all .7s;
+}
+nav a:hover{
+    background:rgba(0,0,255,.9);
+    color: #fff;
+}
+/*responsive nav bar*/
+@media(max-width:480px){
+    nav ul{
+        display: flex;
+        
+    }
+   nav li {
+  margin-top: 20px;
+}
+
+}
+@media(min-width:768px){
+    nav a{
+        font-size: 1.2rem;
+    }
+}
+
+/* Simple Loading Animation*/
+.loading{
+    display:none;
+    width:1.3rem;
+    height:1.3rem;
+    border:dotted;
+    margin: auto;
+    border-bottom:3px solid #000;
+    border-top: 3px solid #cc4311e4;
+    border-left: 3px solid #a12fbd;
+    border-right: 3px solid #000;
+    border-radius: 100%;
+    animation:load 1s linear infinite;
+}
+@keyframes load {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
